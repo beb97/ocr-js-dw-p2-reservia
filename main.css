@@ -1,0 +1,338 @@
+body {
+max-width: 1400px;
+margin: auto;
+font-family: 'Roboto', sans-serif;
+}
+
+nav {
+display:flex;
+flex-wrap: wrap;
+justify-content: space-between;
+ align-items: center;
+}
+
+nav > div {
+display:flex;
+flex-wrap: wrap;
+}
+
+nav > div > a {
+margin: 10px 40px;
+}
+
+
+h1 {
+color:#0065FC;
+font-family: 'Rancho', cursive;
+font-size: 2em;
+margin: 0px;
+
+}
+
+section {
+margin: 0px;
+}
+
+header {
+margin: 20px;
+}
+
+main {
+margin: 20px;
+}
+
+footer {
+margin: 20px;
+max-width : 1200px;
+display:flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+footer > div {
+background-size: 200px;
+width : 100%;
+min-width: 100px;
+max-width: 300px;
+}
+
+a {
+color : #0065FC;
+text-decoration: none;
+}
+
+section > div> h2 {
+	margin-left: 30px;
+}
+
+p {
+	margin-left: 10px;
+}
+
+ ul {
+  list-style-type: none;
+  padding-left: 0px;
+ }
+ 
+ li {
+margin-bottom: 10px;
+ }
+
+.fa {
+color:#0065FC;
+}
+
+.grey-star {
+	color:#D9D9D9;
+}
+
+.nav-selected {
+	border-top: 1px #0065FC solid;
+	padding-top: 3px;
+}
+
+/* Paquet de cartes */
+.card-pack {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+/* Carte */
+.card {
+margin: 10px;
+border-radius: 15px;
+border: 4px white solid;
+background-repeat: no-repeat;
+display: flex;
+justify-content: space-between;
+min-width: 200px;
+max-width: 300px;
+}
+
+/* Carte texte */
+.card  > div:nth-child(2) {
+background-color:white;
+padding: 5px;
+}
+
+/* Carte texte "nuit a partir de" */
+.card > div > div:nth-child(2) {
+margin: 2px;
+font-size: 0.8em;
+}
+/** *** HEBERGEMENT *** **/
+
+#hebergement-ville,
+#hebergement-populaire,
+footer
+ {
+background-color: #F2F2F2;
+border-radius: 15px;
+}
+
+#hebergement {
+display:flex;
+flex-wrap: wrap;
+}
+
+/* ville */
+#hebergement-ville {
+margin-right: 20px;
+}
+
+#hebergement-ville-pack {
+max-width : 800px;
+}
+
+#hebergement-ville-pack > div{
+flex-direction: column;	
+background-size: 100%;
+height : 190px;
+}
+
+
+/* populaire */
+#hebergement-ville,
+#hebergement-populaire {
+margin-bottom: 20px;
+}
+
+#hebergement-populaire-pack {
+max-width : 400px;
+}
+
+#hebergement-populaire-pack > div {
+background-size: 100%;
+min-width: 300px;
+height : 120px;
+}
+
+#hebergement-populaire-pack > div > div:nth-child(2) {
+width:160px;
+}
+
+/** *** ACTIVITE *** **/
+
+#activites-pack {
+max-width : 1200px;
+}
+
+.big-card > div  {
+	box-shadow: 2px 2px 4px 4px #F4F4F4;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 250px;
+	flex-direction: column;
+	border: 0px;
+	height: 150px;
+}
+
+.big-card {
+	height: 350px;
+}
+
+.big-card:nth-child(2n+1) > div  {
+	height: 300px;
+	background-size: 450px;
+}
+
+.big-card > .card > div:nth-child(2) {
+	border-radius: 0 0 10px 10px;
+}
+
+
+/** *** FILTRES *** **/
+
+#filtres {
+display:flex;
+flex-wrap: wrap;
+font-size:1em;
+font-weight: bold;
+}
+
+#filtres > span {
+align-self: center;
+margin-right: 20px
+}
+
+#filtres > button > i{
+background-color: #DEEBFF;
+border-radius: 30px;
+box-shadow: 0 0 0 1px #D9D9D9 inset;
+padding: 10px;
+transition: all 0.5s;
+}
+
+#filtres > button {
+
+	font-size:1em;
+	font-weight: bold;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 0 1px #D9D9D9 inset;
+  padding-left: 0px;
+  transition: all 0.5s;
+}
+#filtres > button:hover {
+  background-color: #DEEBFF;
+  transition: all 0.5s;
+  box-shadow: 0 0 0 2px #0065FC inset;
+}
+
+#filtres > button:hover > i{
+	background-color: #0065FC;
+box-shadow: 0 0 0 2px #0065FC inset;
+color: white;
+
+}
+
+/** *** RECHERCHE *** **/
+
+#mega-input {
+display : flex;
+margin: 20px;
+border-radius: 15px;
+
+}
+#mega-input > input {
+border: 1px #D9D9D9 solid;
+}
+
+#mega-input > input:focus {
+outline-color: #0065FC;
+}
+
+#mega-input > i{
+	color: black;
+background-color: #F2F2F2;
+border-radius: 10px 0 0 10px;
+box-shadow: 0 0 0 1px #D9D9D9 inset;
+padding: 10px;
+transition: all 0.5s;
+}
+
+#mega-input > input[type="submit"] {
+padding: 15px;
+color:white;
+background-color:#0065FC;
+font-weight: bold;
+display: block;
+cursor: pointer;
+outline: none;
+border: none;
+border-radius: 0 10px 10px 0;
+box-shadow: 0 0 0 1px #D9D9D9 inset;
+}
+
+/** *** IMAGES CARTES *** **/
+
+#heb1 {
+	background-image: url("img/heb1.jpg");
+}
+#heb2 {
+	background-image: url("img/heb2.jpg");
+}
+#heb3 {
+	background-image: url("img/heb3.jpg");
+}
+#heb4 {
+	background-image: url("img/heb4.jpg");
+}
+#heb5 {
+	background-image: url("img/heb5.jpg");
+}
+#heb6 {
+	background-image: url("img/heb6.jpg");
+}
+#pop1 {
+	background-image: url("img/pop1.jpg");
+}
+#pop2 {
+	background-image: url("img/pop2.jpg");
+}
+#pop3 {
+	background-image: url("img/pop3.jpg");
+}
+#act1 {
+	background-image: url("img/act1.jpg");
+}
+#act2 {
+	background-image: url("img/act2.jpg");
+}
+#act3 {
+	background-image: url("img/act3.jpg");
+}
+#act4 {
+	background-image: url("img/act4.jpg");
+}
+#act5 {
+	background-image: url("img/act5.jpg");
+}
+#act6 {
+	background-image: url("img/act6.jpg");
+}
