@@ -1,17 +1,24 @@
 body {
-font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	margin: 0px;
+}
+
+:root {
+	--primary-blue: #0065FC;
+	--secondary-blue: #DEEBFF;
+	--primary-grey: #F2F2F2;
 }
 
 header {
-display:flex;
-flex-wrap: wrap;
-justify-content: space-between;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 }
 
-
 main {
-	max-width: 1300px;
+	max-width: 1200px;
+	padding: 10px;
 	margin: auto;
 }
 
@@ -25,69 +32,53 @@ nav {
 	justify-content: center;
 }
 
-nav > div {
-
-}
-
 nav > div > a {
-margin: 10px 40px;
+	margin: 10px 10px;
 }
-
 
 h1 {
-color:#0065FC;
-font-family: 'Rancho', cursive;
-font-size: 2em;
-margin-left: 20px;
+	color: var(--primary-blue);
+	font-family: 'Rancho', cursive;
+	font-size: 4em;
 
-
+	margin: 0 0 0 20px;
 }
-
-section {
-margin: 0px;
+h2, p {
+	margin: 10px;
 }
 
 footer {
-display:flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: var(--primary-grey);
 }
 
 footer > div {
-background-size: 200px;
-width : 100%;
-min-width: 100px;
-max-width: 300px;
+	flex: 1 1 200px;
+	margin: 10px;
 }
 
 a {
-color : #0065FC;
-text-decoration: none;
+	color : var(--primary-blue);
+	text-decoration: none;
 }
 
 section > div> h2 {
 	margin-left: 30px;
 }
 
-p {
-	margin-left: 10px;
+ul {
+	list-style-type: none;
+	padding-left: 0px;
 }
 
- ul {
-  list-style-type: none;
-  padding-left: 0px;
- }
- 
- li {
-margin-bottom: 10px;
- }
-
 .fa {
-color:#0065FC;
+	color:var(--primary-blue);
 }
 
 .fa-search {
-	background-color: #0065FC;
+	background-color: var(--primary-blue);
 	color: white;
 	border-radius: 10px;
 	padding: 10px;
@@ -99,7 +90,7 @@ color:#0065FC;
 }
 
 .nav-selected {
-	border-top: 1px #0065FC solid;
+	border-top: 1px var(--primary-blue) solid;
 	padding-top: 3px;
 }
 
@@ -115,61 +106,60 @@ color:#0065FC;
 /* Carte */
 .card {
 	background-color: white;
-border-radius: 15px;
-border: 4px white solid;
-background-repeat: no-repeat;
-display: flex;
-justify-content: space-between;
-min-width: 200px;
+	border-radius: 15px;
+	border: 4px white solid;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between;
+	min-width: 200px;
 }
 
 /* Carte texte */
 .card  > div:nth-child(2) {
-background-color:white;
-padding: 5px;
+	background-color:white;
+	padding: 5px;
 }
 
 /* Carte texte "nuit a partir de" */
 .card > div > div:nth-child(2) {
-margin: 2px;
-font-size: 0.8em;
+	margin: 2px;
+	font-size: 0.8em;
 }
-/** *** HEBERGEMENT *** **/
 
+/** *** HEBERGEMENT *** **/
 #hebergement-ville,
-#hebergement-populaire,
-footer
- {
-background-color: #F2F2F2;
-border-radius: 15px;
+#hebergement-populaire
+{
+	background-color: var(--primary-grey);
+	border-radius: 15px;
+	padding: 10px;
+	transition: 1s;
 }
 
 #hebergement {
-display:flex;
-flex-wrap: wrap;
+	display:flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
+	column-gap: 10px;
+	row-gap: 10px;
 }
 
 /* ville */
 #hebergement-ville {
-column-gap: 10px;
+	column-gap: 10px;
+	flex: 3 0;
 }
 
-#hebergement-ville-pack {
-max-width : 800px;
+#hebergement-ville-pack > .card{
+	flex-direction: column;
+	flex: 0 0 220px;
+	background-size: 100%;
+	height : 190px;
 }
-
-#hebergement-ville-pack > div{
-flex-direction: column;	
-background-size: 100%;
-height : 190px;
-}
-
 
 /* populaire */
-#hebergement-ville,
 #hebergement-populaire {
-margin-bottom: 20px;
+	flex: 1 1 200px;
 }
 
 #hebergement-populaire-pack {
@@ -177,11 +167,10 @@ margin-bottom: 20px;
 	flex-direction: column;
 }
 
-#hebergement-populaire-pack > div {
+#hebergement-populaire-pack > .card {
 	display: flex;
 	justify-content: start;
 	overflow: hidden;
-	margin: 10px;
 }
 
 .pop-img {
@@ -194,23 +183,16 @@ margin-bottom: 20px;
 	background-color: white;
 }
 
-.pop-text > div {
-
-}
-
 /** *** ACTIVITE *** **/
-
 #activites-pack {
 	margin-bottom: 20px;
-
 }
 
-.big-card > div  {
+.big-card > .card  {
 	box-shadow: 2px 2px 4px 4px #F4F4F4;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	min-width: 250px;
-
 	flex-direction: column;
 	border: 0px;
 	height: 150px;
@@ -220,6 +202,7 @@ margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+	flex: 1 1 200px;
 }
 
 .big-card:nth-child(2n+1) > div  {
@@ -231,149 +214,119 @@ margin-bottom: 20px;
 	border-radius: 0 0 10px 10px;
 }
 
-
 /** *** FILTRES *** **/
-
 #filtres {
-display:flex;
-flex-wrap: wrap;
-font-size:1em;
-font-weight: bold;
-}
-
-#filtres > span {
-align-self: center;
-margin-right: 20px
+	display:flex;
+	flex-wrap: wrap;
+	font-size:1em;
+	font-weight: bold;
+	row-gap: 10px;
+	column-gap: 10px;
 }
 
 #filtres > button > i{
-background-color: #DEEBFF;
-border-radius: 30px;
-box-shadow: 0 0 0 1px #D9D9D9 inset;
-padding: 10px;
-transition: all 0.5s;
+	background-color: var(--secondary-blue);
+	border-radius: 30px;
+	box-shadow: 0 0 0 1px #D9D9D9 inset;
+	padding: 10px;
+	transition: all 0.5s;
 }
 
 #filtres > button {
-
 	font-size:1em;
 	font-weight: bold;
-  display: block;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: 0 0 0 1px #D9D9D9 inset;
-  padding-left: 0px;
-  transition: all 0.5s;
+	background-color: white;
+	border-radius: 30px;
+	box-shadow: 0 0 0 1px #D9D9D9 inset;
+	padding-left: 0px;
+	transition: all 0.5s;
 }
+
 #filtres > button:hover {
-  background-color: #DEEBFF;
-  transition: all 0.5s;
-  box-shadow: 0 0 0 2px #0065FC inset;
+	background-color: var(--secondary-blue);
+	transition: all 0.5s;
+	box-shadow: 0 0 0 2px var(--primary-blue) inset;
 }
 
 #filtres > button:hover > i{
-	background-color: #0065FC;
-box-shadow: 0 0 0 2px #0065FC inset;
-color: white;
-
+	background-color: var(--primary-blue);
+	box-shadow: 0 0 0 2px var(--primary-blue) inset;
+	color: white;
 }
 
 /** *** RECHERCHE *** **/
-
 #mega-input {
 	display : flex;
+	max-width: 400px;
 	overflow: hidden;
 	margin: 20px;
 	border-radius: 15px;
 	border: 1px #D9D9D9 solid;
 	/* Pour que le width du container flex parent ne prenne pas toute la page*/
-	width: min-content;
+
 }
 #mega-input > input {
 	border: 0px;
+	flex: 2 1 200px;
+	/** https://stackoverflow.com/questions/42421361/input-button-elements-not-shrinking-in-a-flex-container */
+	min-width: 0;
 }
 
 #mega-input > input:focus {
-outline-color: #0065FC;
+	outline-color: var(--primary-blue);
 }
 
 .fa-map-marker-alt {
 	color: black;
-	background-color: #F2F2F2;
+	background-color: var(--primary-grey);
 	padding: 10px;
-	transition: all 0.5s;
 }
 
 #mega-input > input[type="submit"] {
-padding: 15px;
-color:white;
-background-color:#0065FC;
-font-weight: bold;
-display: block;
-cursor: pointer;
-outline: none;
-border: none;
+	padding: 15px;;
+	flex: 1 1 120px;
+	color:white;
+	background-color:var(--primary-blue);
+	font-weight: bold;
+}
+
+.clickable {
+	display: block;
+	cursor: pointer;
+	outline: none;
+	border: none;
 }
 
 /** *** IMAGES CARTES *** **/
+#heb1 { background-image: url("img/heb1.jpg"); }
+#heb2 { background-image: url("img/heb2.jpg"); }
+#heb3 { background-image: url("img/heb3.jpg"); }
+#heb4 { background-image: url("img/heb4.jpg"); }
+#heb5 { background-image: url("img/heb5.jpg"); }
+#heb6 { background-image: url("img/heb6.jpg"); }
 
-#heb1 {
-	background-image: url("img/heb1.jpg");
-}
-#heb2 {
-	background-image: url("img/heb2.jpg");
-}
-#heb3 {
-	background-image: url("img/heb3.jpg");
-}
-#heb4 {
-	background-image: url("img/heb4.jpg");
-}
-#heb5 {
-	background-image: url("img/heb5.jpg");
-}
-#heb6 {
-	background-image: url("img/heb6.jpg");
-}
-#pop1 > .pop-img {
-	background-image: url("img/pop1.jpg");
-}
-#pop2 > .pop-img  {
-	background-image: url("img/pop2.jpg");
-}
-#pop3 > .pop-img  {
-	background-image: url("img/pop3.jpg");
-}
-#act1 {
-	background-image: url("img/act1.jpg");
-}
-#act2 {
-	background-image: url("img/act2.jpg");
-}
-#act3 {
-	background-image: url("img/act3.jpg");
-}
-#act4 {
-	background-image: url("img/act4.jpg");
-}
-#act5 {
-	background-image: url("img/act5.jpg");
-}
-#act6 {
-	background-image: url("img/act6.jpg");
-}
+#pop1 > .pop-img { background-image: url("img/pop1.jpg"); }
+#pop2 > .pop-img  { background-image: url("img/pop2.jpg"); }
+#pop3 > .pop-img  { background-image: url("img/pop3.jpg"); }
 
+#act1 { background-image: url("img/act1.jpg"); }
+#act2 { background-image: url("img/act2.jpg"); }
+#act3 { background-image: url("img/act3.jpg"); }
+#act4 { background-image: url("img/act4.jpg"); }
+#act5 { background-image: url("img/act5.jpg"); }
+#act6 { background-image: url("img/act6.jpg"); }
+
+@media screen and (max-width: 900px) {
+	#hebergement {
+		flex-direction: column;
+	}
+}
 @media screen and (max-width: 500px) {
 	header {
 		flex-direction: column;
 	}
 
-	nav {
-		width: 100%;
-	}
+	nav {width: 100%;}
 
 	#heb-act > a {
 		flex-basis: 50%;
@@ -396,6 +349,7 @@ border: none;
 	}
 
 	#hebergement {
+		flex-direction: column;
 	}
 
 	#hebergement-populaire {
@@ -404,9 +358,8 @@ border: none;
 	#hebergement-ville {
 		order: 2;
 	}
-
-	.card {
-		width: 90%;
+	#hebergement-ville-pack > .card {
+		flex: 1 0 220px;
 	}
 
 	.big-card > div {
